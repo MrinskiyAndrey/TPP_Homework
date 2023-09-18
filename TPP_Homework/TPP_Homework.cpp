@@ -9,7 +9,7 @@ using namespace std;
     double z(double x1, double x2) {
         return pow(x1, 2) + 3 * pow(x2, 2);
     }
-    double g1(double x1, double x2) {
+    double g1(double x1, double x2) {    //результат положителен только при x1=0 и x2=0. minz и minz1 не будут заданны
         return -x2 - 3 * pow(x1, 2) + 2;
     }
     double g2(double x1, double x2) {
