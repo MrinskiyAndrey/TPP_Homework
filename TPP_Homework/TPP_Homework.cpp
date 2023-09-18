@@ -125,7 +125,7 @@ int main()
                 minz1 = Z1[i]; //инициализация minz1 маловероятна
                 r1 = i;
                 cout << "Условие по alfa тоже выполнено" << endl;
-                goto metka;
+                goto metka;  //нежелательное использование goto, можно было использовать break;
             }
             if (m1 < 1) {
                 minz1 = Z1[i];     
