@@ -4,11 +4,7 @@
 #include<math.h>
 #include<cassert>
 
-
 using namespace std;
-
-
-
 
     double z(double x1, double x2) {
         return pow(x1, 2) + 3 * pow(x2, 2);
@@ -79,27 +75,21 @@ int main()
     Test_g2();
     Test_sum();
 
-    int N, m = 0, m1 = 0, r=0, r1=0;
+    int N, m = 0, m1 = 0, r , r1;     //r и r1 отсутствуют значения по умолчанию
     double x1a, x1b, x2a, x2b, minz, minz1, e, d, alfa;
-    cout << "Введите размерность массивов N=";
-    cin >> N;
 
+    cout << "N=";
+    cin >> N;
     cout << "x1a=";
     cin >> x1a;
-
-
     cout << "x1b=";
     cin >> x1b;
-
     cout << "x2a=";
     cin >> x2a;
-
     cout << "x2b=";
     cin >> x2b;
-
     cout << "e=";
     cin >> e;
-
     cout << "alfa=";
     cin >> alfa;
 
@@ -118,7 +108,7 @@ int main()
         {
             Z[i] = z(x1[i], x2[i]);
             if (m < 1) {
-                minz = Z[i];
+                minz = Z[i];    //инициализация minz маловероятна
                 m = m + 1;
             }
             if (minz > Z[i]) {
@@ -129,16 +119,16 @@ int main()
     for (int i = 0; i < N; i++) {
         x1_1[i] = (((x1[r] + e) - (x1[r] - e)) * ((double)rand() / RAND_MAX)) + (x1[r] - e);
         x2_1[i] = (((x2[r] + e) - (x2[r] - e)) * ((double)rand() / RAND_MAX)) + (x2[r] - e);
-        if (g1(x1_1[i], x2_1[i]) >= 0 and g2(x1_1[i], x2_1[i])) {
+        if (g1(x1_1[i], x2_1[i]) >= 0 and g2(x1_1[i], x2_1[i])) { //отсутствует сравнение для g2
             Z1[i] = z(x1_1[i], x2_1[i]);
             if (sqrt(pow(Z[r] - Z1[i], 2)) <= alfa) {
-                minz1 = Z1[i];
+                minz1 = Z1[i]; //инициализация minz1 маловероятна
                 r1 = i;
                 cout << "Условие по alfa тоже выполнено" << endl;
                 goto metka;
             }
             if (m1 < 1) {
-                minz1 = Z1[i];
+                minz1 = Z1[i];     
                 m1 = m + 1;
             }
             if (minz1 > Z1[i]) {

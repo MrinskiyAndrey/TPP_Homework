@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ModuleTests.cpp" />
     <ClCompile Include="TPP_Homework.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ModuleTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
