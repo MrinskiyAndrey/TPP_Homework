@@ -1,5 +1,5 @@
 ﻿#include<iostream>
-#include<iomanip>
+#include<iomanip>  //подключена неиспользуемая библиотека
 #include<ctime>
 #include<math.h>
 #include<cassert>
@@ -138,9 +138,9 @@ int main()
         }
     }
 metka:
-    cout << "minz=" << minz << " " << "x1=" << x1[r] << " " << "x2=" << x2_1[r1] << endl;
-    cout << "minz1=" << minz1 << " " << "x1_1=" << x1_1[r1] << " " << "x2_1=" << x2_1[r1] << endl;
-    cout << "minz-minz1=" << sqrt(pow(Z[r] - Z[r1], 2)) << endl;
+    cout << "minz=" << minz << " " << "x1=" << x1[r] << " " << "x2=" << x2_1[r1] << endl; //пробелы можно было добавить перед описание переменных, а не вызывать отдельный cout
+    cout << "minz1=" << minz1 << " " << "x1_1=" << x1_1[r1] << " " << "x2_1=" << x2_1[r1] << endl; //тоже самое что и на строке выше
+    cout << "minz-minz1=" << sqrt(pow(Z[r] - Z[r1], 2)) << endl; //квадратный корень квадрата (бесполезные нагромождения)
 
 
 
