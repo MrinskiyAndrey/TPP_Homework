@@ -24,7 +24,7 @@ int main()
     Test_sum();
 
     int N, m = 0, m1 = 0, r = 0, r1 = 0;
-    double x1a, x1b, x2a, x2b, minz, minz1, e, d, alfa;
+    double x1a, x1b, x2a, x2b, minz=0, minz1=0, e, d, alfa;
 
     cout << "N=";
     cin >> N;
@@ -86,10 +86,16 @@ int main()
         }
     }
 
-    cout << "minz=" << minz << " x1=" << x1[r] << " x2=" << x2_1[r1] << endl;
-    cout << "minz1=" << minz1 << " x1_1=" << x1_1[r1] << " x2_1=" << x2_1[r1] << endl;
-    cout << "minz-minz1=" << minz - minz1 << endl;
-
+    if (minz!=0 && minz1!=0)
+    {
+        cout << "minz=" << minz << " x1=" << x1[r] << " x2=" << x2_1[r1] << endl;
+        cout << "minz1=" << minz1 << " x1_1=" << x1_1[r1] << " x2_1=" << x2_1[r1] << endl;
+        cout << "minz-minz1=" << minz - minz1 << endl;
+    }
+    else
+    {
+        cout << "minz и minz1 не определены" << endl;
+    }
     system("pause");
     return 0;
 }
